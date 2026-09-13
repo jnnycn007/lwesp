@@ -12,17 +12,25 @@ Follow documentation for more information on implementation and details.
 ## Features
 
 - Written in C (C11), compatible with `stdint.h` data types
-- Supports latest ESP32, ESP32-C2, ESP32-C3, ESP32-C6 & ESP8266 AT software from Espressif system
-- Platform independent and very easy to port
-- Available examples for ARM Cortex-M, Win32 or POSIX (mostly Linux) platforms
+- Supports latest ESP32, ESP32-C2, ESP32-C3, ESP32-C6 & ESP8266 AT software from Espressif Systems
+- Platform independent and easy to port
+  - Library is developed under Win32 platform
+  - Available examples for ARM Cortex-M, Win32 or POSIX (mostly Linux) platforms
 - Allows different configurations to optimize user requirements
-- Supports implementation with operating systems with advanced inter-thread communications
-- Uses `2` tasks for data handling from user and device
-- Includes several applications built on top of library
-  - Netconn sequential API for client and server
-  - HTTP server with dynamic files (file system) supported
+- Supports operating-system implementations with advanced inter-thread communication (or RTOS)
+  - Currently only OS mode is supported
+  - Uses `2` different threads to process user input and received data
+    - Producer thread collects user commands from application threads and starts command execution
+    - Process thread processes received data from the ESP device
+- Netconn-based sequential API for connections in client and server mode
+- Includes several applications built on top of the library
+  - HTTP server with dynamic files (file system) support
   - MQTT client
-- Embeds other AT features, such as WPS management, custom DNS setup, Hostname for DHCP, Ping feature
+- Embeds other AT features, such as WPS management, custom DNS setup, hostname for DHCP, and ping
+- Optional IPv6 support
+- mDNS, SNTP time sync and SmartConfig provisioning modules
+- System flash and manufacturing NVS read/write/erase access
+- Optional CLI module with ready-made commands for common operations
 - User friendly MIT license
 
 ## Contribute

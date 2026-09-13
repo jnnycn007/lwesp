@@ -3,8 +3,8 @@ LwESP |version| documentation
 
 Welcome to the documentation for version |version|.
 
-LwESP is generic, platform independent, ESP-AT parser library to communicate with *ESP8266* or *ESP32* WiFi-based microcontrollers from *Espressif systems* using official AT Commands set running on ESP device.
-Its objective is to run on master system, while Espressif device runs official AT commands firmware developed and maintained by *Espressif systems*.
+LwESP is generic, platform independent, ESP-AT parser library to communicate with *ESP8266* or *ESP32* WiFi-based microcontrollers from *Espressif Systems* using official AT Commands set running on ESP device.
+Its objective is to run on master system, while Espressif device runs official AT commands firmware developed and maintained by *Espressif Systems*.
 
 .. image:: static/images/logo.svg
     :align: center
@@ -18,29 +18,32 @@ Features
 ^^^^^^^^
 
 * Written in C (C11), compatible with ``stdint.h`` data types
-* Supports latest ESP32, ESP32-C2, ESP32-C3, ESP32-C6 & ESP8266 AT software from Espressif system
+* Supports latest ESP32, ESP32-C2, ESP32-C3, ESP32-C6 & ESP8266 AT software from Espressif Systems
 * Platform independent and easy to port
 
   * Library is developed under Win32 platform
-  * Provided examples for ARM Cortex-M or Win32 platforms
+  * Available examples for ARM Cortex-M, Win32 or POSIX (mostly Linux) platforms
 
 * Allows different configurations to optimize user requirements
-* Optimized for systems with operating systems (or RTOS)
+* Supports operating-system implementations with advanced inter-thread communication (or RTOS)
 
   * Currently only OS mode is supported
-  * ``2`` different threads to process user inputs and received data
+  * ``2`` different threads to process user input and received data
 
-    * Producer thread to collect user commands from application threads and to start command execution
-    * Process thread to process received data from *ESP* device
+    * Producer thread collects user commands from application threads and starts command execution
+    * Process thread processes received data from *ESP* device
 
-* Allows sequential API for connections in client and server mode
-* Includes several applications built on top of library
+* Netconn-based sequential API for connections in client and server mode
+* Includes several applications built on top of the library
 
   * HTTP server with dynamic files (file system) support
-  * MQTT client for MQTT connection
-  * MQTT client Cayenne API for Cayenne MQTT server
+  * MQTT client
 
-* Embeds other AT features, such as WPS
+* Embeds other AT features, such as WPS management, custom DNS setup, hostname for DHCP, and ping
+* Optional IPv6 support
+* mDNS, SNTP time sync and SmartConfig provisioning modules
+* System flash and manufacturing NVS read/write/erase access
+* Optional CLI module with ready-made commands for common operations
 * User friendly MIT license
 
 Requirements
