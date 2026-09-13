@@ -3,8 +3,8 @@ LwESP |version| documentation
 
 Welcome to the documentation for version |version|.
 
-LwESP is generic, platform independent, ESP-AT parser library to communicate with *ESP8266* or *ESP32* WiFi-based microcontrollers from *Espressif Systems* using official AT Commands set running on ESP device.
-Its objective is to run on master system, while Espressif device runs official AT commands firmware developed and maintained by *Espressif Systems*.
+LwESP is a generic, platform independent, ESP-AT parser library to communicate with *ESP8266*, *ESP32* and other ESP32-series (C2/C3/C6) WiFi-based microcontrollers from *Espressif Systems*, using UART or SPI to run the official AT Commands firmware.
+Its objective is to run on the master system, while the Espressif device runs official AT commands firmware developed and maintained by *Espressif Systems*.
 
 .. image:: static/images/logo.svg
     :align: center

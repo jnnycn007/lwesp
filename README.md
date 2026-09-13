@@ -1,6 +1,6 @@
 # Lightweight ESP-AT parser
 
-LwESP is lightweight ESP AT commands parser library to communicate with ESP8266 or ESP32 Wi-Fi modules using AT commands.
+LwESP is a lightweight ESP AT commands parser library to communicate with ESP8266, ESP32 and other ESP32-series (C2/C3/C6) Wi-Fi modules using AT commands.
 Module is written in C11 and is system platform agnostic. Its main targets are embedded system devices like ARM Cortex-M, AVR, PIC and others, but can easily work under `Windows`, `Linux` or `MAC` environments too.
 
 Espressif module runs official [AT Commands (esp-at)](https://github.com/espressif/esp-at) software and communicates with host device via UART or SPI communication protocol.
